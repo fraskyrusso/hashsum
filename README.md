@@ -17,4 +17,4 @@
 
 ## License
 
-This software is published under MIT and GPL
+This gem is published under MIT and GPL
