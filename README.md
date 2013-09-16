@@ -1,4 +1,4 @@
-# Hashsum
+# Hashsum [![Gem Version](https://badge.fury.io/rb/hashsum.png)](http://badge.fury.io/rb/hashsum)
 
 ## Install
 
