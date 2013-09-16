@@ -1,4 +1,5 @@
 # Hashsum
+<<<<<<< HEAD
 ## Install
     gem install hashsum
 ## Usage
@@ -10,3 +11,8 @@
 [@fraskyrusso](http://www.fraskyrusso.com)
 ## License
 This software is published under MIT and GPL licenses 
+=======
+---
+## Install
+    gem install hashsum
+>>>>>>> 7354e4c3368d0f2325d1844b3142e80b7a56906f
