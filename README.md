@@ -13,7 +13,7 @@
 
 ## Author
 
-[@fraskyrusso](http://www.fraskyrusso.com)
+[@fraskyrusso](http://twitter.com/fraskyrusso)
 
 ## License
 
