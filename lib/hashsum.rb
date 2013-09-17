@@ -5,10 +5,11 @@ class String
     sha1:   Digest::SHA1,
     sha2:   Digest::SHA2,
     sha256: Digest::SHA256,
-    sha384: Digest::SHA348,
+    sha384: Digest::SHA384,
     sha512: Digest::SHA512
   }
   def hashsum(hash, salt = "")
+    require 'digest'
     HASH[hash].hexdigest(salt+self)
   end
   def to_md5(salt = "")
