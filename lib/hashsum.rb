@@ -1,11 +1,32 @@
 class String
+  # Algorithms
+  HASH = {
+    md5:    Digest::MD5,
+    sha1:   Digest::SHA1,
+    sha2:   Digest::SHA2,
+    sha256: Digest::SHA256,
+    sha384: Digest::SHA348,
+    sha512: Digest::SHA512
+  }
+  def hashsum(hash, salt = "")
+    HASH[hash].hexdigest(salt+self)
+  end
   def to_md5(salt = "")
-    Digest::MD5.hexdigest(salt+self)
+    hashsum(:md5, salt)
   end
   def to_sha1(salt = "")
-    Digest::SHA1.hexdigest(salt+self)
+    hashsum(:sha1, salt)
   end
   def to_sha2(salt = "")
-    Digest::SHA2.hexdigest(salt+self)
+    hashsum(:sha2, salt)
+  end
+  def to_sha256(salt = "")
+    hashsum(:sha256, salt)
+  end
+  def to_sha384(salt = "")
+    hashsum(:sha384, salt)
+  end
+  def to_sha512(salt = "")
+    hashsum(:sha512, salt)
   end
 end
