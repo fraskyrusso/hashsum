@@ -22,6 +22,23 @@
     "String to Hash".to_md5("with Salt")        => "4fb893fcf815198c0905e59d6685b5ec"
     "String to Hash".to_sha1("with Salt")       => "d16dbd40354fe3b418da952e648f4eca37e05a78"
 
+## Command line tool
+
+    $ hashsum foo
+    0beec7b5ea3f0fdbc95d0dd47f3c5bc275da8a33 foo
+
+    $ hashsum foo bar
+    0beec7b5ea3f0fdbc95d0dd47f3c5bc275da8a33 foo
+    62cdb7020ff920e5aa642c3d4066950dd1f01f4d bar
+
+    $ hashsum -a md5 foo bar
+    acbd18db4cc2f85cedef654fccc4a4d8 foo
+    37b51d194a7513e45b56f6524f2d51f2 bar
+
+For more see
+
+    $ hashsum -h
+
 ## Author
 
 [@fraskyrusso](http://twitter.com/fraskyrusso)
