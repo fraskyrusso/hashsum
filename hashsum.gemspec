@@ -1,6 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = "hashsum"
-  s.version     = "2.1.2"
+  s.version     = "2.1.3"
+  s.executables << "hashsum"
   s.date        = "2013-09-17"
   s.summary     = "Hashsum"
   s.description = "Add hashing methods to String class"
