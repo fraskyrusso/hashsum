@@ -9,7 +9,6 @@ class String
     sha512: Digest::SHA512
   }
   def hashsum(hash, salt = "")
-    require 'digest'
     HASH[hash].hexdigest(salt+self)
   end
   def to_md5(salt = "")
