@@ -33,7 +33,7 @@ $ hashsum foo bar
 62cdb7020ff920e5aa642c3d4066950dd1f01f4d bar
 ```
 ```shell
-$ hashsum -a md5 foo bar
+$ hashsum foo bar -a md5
 acbd18db4cc2f85cedef654fccc4a4d8 foo
 37b51d194a7513e45b56f6524f2d51f2 bar
 ```
