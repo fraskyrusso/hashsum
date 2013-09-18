@@ -1,9 +1,9 @@
 # Hashsum [![Gem Version](https://badge.fury.io/rb/hashsum.png)](http://badge.fury.io/rb/hashsum)
 
 ## Install
-
-    gem install hashsum
-
+```shell
+gem install hashsum
+```
 ## Algorithms
 
 * MD5
