@@ -22,7 +22,7 @@ gem install hashsum
 "String to Hash".to_md5("with Salt")        # "4fb893fcf815198c0905e59d6685b5ec"
 "String to Hash".to_sha1("with Salt")       # "d16dbd40354fe3b418da952e648f4eca37e05a78"
 ```
-## Command line tool
+## Executable
 ```shell
 $ hashsum foo
 0beec7b5ea3f0fdbc95d0dd47f3c5bc275da8a33 foo
