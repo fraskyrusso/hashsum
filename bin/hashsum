@@ -12,34 +12,39 @@ HELP = <<-EOS
   Examples:
     hashsum foo
     hashsum foo bar
-    hashsum -a md5 foo
+    hashsum foo -a md5
 EOS
 
-VERSION = '2.1.4'
+VERSION = '2.1.5'
 
 case ARGV.first
   when '-h', '--help'
     puts HELP
   when '-v', '--version'
-    puts VERSION
-  when '-a', '--algorithm'
-  	algorithm = ARGV[1]
-
-    ARGV.shift
-    ARGV.shift
-
-    ARGV.each do |arg|
-      puts arg.hashsum(:md5) + ' ' + arg if algorithm == 'md5'
-      puts arg.hashsum(:sha1) + ' ' + arg if algorithm == 'sha1'
-      puts arg.hashsum(:sha2) + ' ' + arg if algorithm == 'sha2'
-      puts arg.hashsum(:sha256) + ' ' + arg if algorithm == 'sha256'
-      puts arg.hashsum(:sha384) + ' ' + arg if algorithm == 'sha384'
-      puts arg.hashsum(:sha512) + ' ' + arg if algorithm == 'sha512'
-    end
-  when nil
-    puts "\e[31mERROR\e[0m: Invalid option. See 'hashsum -h'"
+  	puts VERSION
   else
-    ARGV.each do |arg|
-      puts arg.hashsum(:sha1) + ' ' + arg
+    *args, opt, val = ARGV
+
+    if opt == '-a' || opt == '--algorithm'
+      args.each do |arg|
+        puts arg.hashsum(:md5) + " " + arg if val == 'md5'
+        puts arg.hashsum(:sha1) + ' ' + arg if val == 'sha1'
+        puts arg.hashsum(:sha2) + ' ' + arg if val == 'sha2'
+        puts arg.hashsum(:sha256) + ' ' + arg if val == 'sha256'
+        puts arg.hashsum(:sha384) + ' ' + arg if val == 'sha384'
+        puts arg.hashsum(:sha512) + ' ' + arg if val == 'sha512'
+      end
+    else
+      args.each do |arg|
+        puts arg.hashsum(:sha1) + " " + arg
+      end
+      
+      if opt
+        puts opt.hashsum(:sha1) + " " + opt
+      else
+        puts "\e[31mERROR\e[0m: Invalid option. See 'hashsum -h'"
+      end
+
+      puts val.hashsum(:sha1) + " " + val if val
     end
 end
