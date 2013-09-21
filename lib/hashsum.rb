@@ -2,12 +2,12 @@
 class String
   # Algorithms
   HASH = {
-    md5:    Digest::MD5,
-    sha1:   Digest::SHA1,
-    sha2:   Digest::SHA2,
-    sha256: Digest::SHA256,
-    sha384: Digest::SHA384,
-    sha512: Digest::SHA512
+    md5:    Digest::MD5.new,
+    sha1:   Digest::SHA1.new,
+    sha2:   Digest::SHA2.new,
+    sha256: Digest::SHA256.new,
+    sha384: Digest::SHA384.new,
+    sha512: Digest::SHA512.new
   }
   # Encrypt a String with an algorithm and a salt if you want more security
   def hashsum(hash, salt = "")
