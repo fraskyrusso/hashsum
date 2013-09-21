@@ -1,18 +1,14 @@
 require 'digest'
 # @author Francesco Russo
 class String
-  # Algorithms
-  HASH = {
-    md5:    Digest::MD5.new,
-    sha1:   Digest::SHA1.new,
-    sha2:   Digest::SHA2.new,
-    sha256: Digest::SHA256.new,
-    sha384: Digest::SHA384.new,
-    sha512: Digest::SHA512.new
-  }
   # Encrypt a String with an algorithm and a salt if you want more security
   def hashsum(hash, salt = "")
-    HASH[hash].hexdigest(salt+self)
+    Digest::MD5.hexdigest(salt+self) if hash == :md5
+    Digest::SHA1.hexdigest(salt+self) if hash == :sha1
+    Digest::SHA2.hexdigest(salt+self) if hash == :sha2
+    Digest::SHA256.hexdigest(salt+self) if hash == :sha256
+    Digest::SHA384.hexdigest(salt+self) if hash == :sha384
+    Digest::SHA512.hexdigest(salt+self) if hash == :sha512
   end
   # Encrypt a String with MD5 and a salt if you want more security
   def to_md5(salt = "")
