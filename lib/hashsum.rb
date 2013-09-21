@@ -1,3 +1,5 @@
+require 'digest'
+
 # @author Francesco Russo
 class String
   # Encrypt a String with an algorithm and a salt if you want more security
