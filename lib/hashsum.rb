@@ -1,6 +1,7 @@
 require 'digest'
 
 # @author Francesco Russo
+# @version 2.1.6
 class String
   # Encrypt a String with an algorithm and a salt if you want more security
   def hashsum(hash, salt = "")

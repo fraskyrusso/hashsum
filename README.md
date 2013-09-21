@@ -1,4 +1,4 @@
-# Hashsum [![Gem Version](https://badge.fury.io/rb/hashsum.png)](http://badge.fury.io/rb/hashsum)
+# Hashsum [![Build Status](https://travis-ci.org/fraskyrusso/hashsum.png?branch=master)](https://travis-ci.org/fraskyrusso/hashsum) [![Gem Version](https://badge.fury.io/rb/hashsum.png)](http://badge.fury.io/rb/hashsum)
 
 ## Install
 ```shell

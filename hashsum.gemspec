@@ -1,8 +1,10 @@
+require 'date'
+
 Gem::Specification.new do |s|
   s.name        = "hashsum"
-  s.version     = "2.1.5"
+  s.version     = "2.1.6"
   s.executables << "hashsum"
-  s.date        = "2013-09-18"
+  s.date        = Date.today.to_s
   s.summary     = "Hashsum"
   s.description = "Add hashing methods to String class"
   s.authors     = ["Francesco Russo"]

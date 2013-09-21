@@ -15,7 +15,7 @@ HELP = <<-EOS
     hashsum foo -a md5
 EOS
 
-VERSION = '2.1.5'
+VERSION = '2.1.6'
 
 case ARGV.first
   when '-h', '--help'
