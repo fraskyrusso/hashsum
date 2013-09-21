@@ -1,3 +1,4 @@
+require 'digest'
 # @author Francesco Russo
 class String
   # Algorithms
